@@ -31,14 +31,12 @@ const Login = () => {
         const password = event.target.password.value;
         signInWithEmailAndPassword(email, password);
         event.target.reset();
-
     }
 
     // signin with google 
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
-
     const handleGoogleSignIn = () => {
-        signInWithGoogle();
+        // signInWithGoogle();
     }
 
    

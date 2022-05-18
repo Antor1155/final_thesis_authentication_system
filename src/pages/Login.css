@@ -1,9 +1,22 @@
+.loginPage{
+    background-color:#f0e4d6 ;
+    padding: 25px;
+    border-radius: 14%;
+    width: 40%;
+}
 .submitBtn{
     margin-top: 15px;
     background-color: rgb(78, 210, 151); 
-    
+    border: none;
+    border-radius: 7px;
 }
 .submitBtn:hover{
     background-color: rgb(196,28,29); 
     color: white;
+}
+.loginPage img{
+    width: 40px;
+}
+.GoogleBtnDiv button{
+    background-color: transparent;
 }

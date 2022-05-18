@@ -4,7 +4,7 @@ import "./Attendence.css"
 const AttendencePage = () => {
     const [data, setData] = useState([]);
     useEffect(() => {
-        fetch('fakedata.json')
+        fetch('http://localhost:3000/fakedata.json')
             .then(res => res.json())
             .then(data => setData(data))
     }, [])
@@ -20,7 +20,7 @@ const AttendencePage = () => {
                         <td className='fs-3'>time</td>
                     </thead>
                     <tbody>
-                        {res.presence.map(nt => <tr>
+                        {res.presence.map(nt => <tr key={nt.name}>
                             <td>{nt.name}</td>
                             <td>{nt.time}</td>
                         </tr>)}

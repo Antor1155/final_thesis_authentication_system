@@ -1,0 +1,15 @@
+.adminButton{
+    display: flex;
+    justify-content: space-around;
+}
+
+.adminButton a{
+    display: block;
+    text-decoration: none;
+    background-color:#B8E167 ;
+    font-size: larger;
+    padding: 1rem 2rem;
+    color: black;
+    border-radius: 66px;
+    border: 1px solid black;
+}

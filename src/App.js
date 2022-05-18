@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Register from './pages/Register';
 import AttendencePage from './pages/AttendencePage';
 import Officials from './pages/officials/Officials';
+import AdminPage from './AdminPage/AdminPage';
+import AllUsers from './AllUsers/AllUsers';
 
 function App() {
 
@@ -18,9 +20,15 @@ function App() {
 
 
       <Routes>
-        <Route path='/' element={<Officials></Officials>}    />
+        <Route path='/' element={<Officials></Officials>} />
         <Route path="/login" element={<Login></Login>}></Route>
-        <Route path='/register' element={<Register></Register>}> </Route>
+        <Route path='/attendence' element={<AttendencePage></AttendencePage>}></Route>
+
+        <Route path="admin" element={<AdminPage></AdminPage>}>
+          <Route path='addUsers' element={<Register></Register>}> </Route>
+          <Route path='users' element={<AllUsers></AllUsers>}> </Route>
+          <Route path='attendence' element={<AttendencePage></AttendencePage>}></Route>
+        </Route>
       </Routes>
     </div>
   );

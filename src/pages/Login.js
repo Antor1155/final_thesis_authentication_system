@@ -39,7 +39,9 @@ const Login = () => {
         // signInWithGoogle();
     }
 
-   
+    if (googleUser || user) {
+        navigate(from, { replace: true });
+    }
 
     return (
         <div className='loginPage mt-5 mb-5 pb-5 mx-auto'>

@@ -3,8 +3,11 @@ import './App.css';
 import Login from './pages/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Register from './pages/Register';
+import AttendencePage from './pages/AttendencePage';
+import Officials from './pages/officials/Officials';
 
 function App() {
+
   return (
     <div className="App">
 
@@ -15,6 +18,7 @@ function App() {
 
 
       <Routes>
+        <Route path='/' element={<Officials></Officials>}    />
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}> </Route>
       </Routes>

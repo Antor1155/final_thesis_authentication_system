@@ -1,0 +1,12 @@
+[
+    {
+      "id": "6284b48518cb348497c11cbc",
+      "date": "10 mar,2022",
+      "presence": [{"name":"Md Azizul Hakim Antor", "time":"10:44pm"},{"name":"Atiq Faisal Antu", "time":"10.55pm"}, {"name": "Alamin Alfaz", "time":"10.54 pm"}, {"name":"Eshan Ahammed", "time":"10.58pm"}]
+    },
+    {
+      "id": "6284b485ab1ff782dfeb1c67",
+      "date": "11 mar,2022",
+      "presence":  [{"name":"Md Azizul Hakim Antor", "time":"10:44pm"},{"name":"Atiq Faisal Antu", "time":"10.55pm"}, {"name": "Alamin Alfaz", "time":"10.54 pm"}, {"name":"Eshan Ahammed", "time":"10.58pm"}]
+    }
+  ]

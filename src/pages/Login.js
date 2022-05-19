@@ -36,7 +36,7 @@ const Login = () => {
     // signin with google 
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const handleGoogleSignIn = () => {
-        // signInWithGoogle();
+        signInWithGoogle();
     }
 
     if (googleUser || user) {

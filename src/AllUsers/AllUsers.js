@@ -1,11 +1,9 @@
 import React from 'react';
-import auth from '../utilities/firebase.init';
 
 const AllUsers = () => {
-    console.log(auth);
     return (
         <div>
-            
+            <h1> here comes all users</h1>
         </div>
     );
 };

@@ -8,7 +8,6 @@ const Officials = () => {
 
     const [user, loading, error] = useAuthState(auth);
     if(user){
-
         console.log(user.email)
     }
     return (

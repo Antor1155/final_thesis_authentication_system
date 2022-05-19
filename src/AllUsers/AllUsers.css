@@ -1,0 +1,17 @@
+.usersTable{
+    margin-top: 3rem;
+}
+.usersTable thead td{
+    background-color:#72DF61;
+}
+.usersTable button{
+    font-weight: bolder;
+    border-radius: 44px;
+    padding: .7rem 2rem;
+    background-color: #EA8080;
+    border: none;
+}
+.usersTable a{
+    text-decoration: none;
+    color: black;
+}

@@ -1,19 +1,11 @@
 import React, { useEffect } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import googleImg from "../Images/logos/google.png";
+
 import auth from '../utilities/firebase.init';
-import { useCreateUserWithEmailAndPassword, useSendEmailVerification, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword} from 'react-firebase-hooks/auth';
 import toast, { Toaster } from 'react-hot-toast';
 
 
 const Register = () => {
-
-
-    let navigate = useNavigate();
-    let location = useLocation();
-    let from = location.state?.from?.pathname || "/";
-
-    const [sendEmailVerification] = useSendEmailVerification(auth);
 
     useEffect(() => {
         document.body.style = 'background:rgb(240, 238, 238)';
@@ -34,10 +26,17 @@ const Register = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
 
+        const name = email.split('@')[0];
+
         await createUserWithEmailAndPassword(email, password);
 
-        // sending email verification 
-        await sendEmailVerification();
+        // adding the user to database 
+        fetch('http://localhost:5000/addUser',{
+            method: 'POST',
+            headers: {"content-type": "application/json"},
+            body: JSON.stringify({name, catagory: "officials"})
+        }).then(res => res.json())
+        .then(data => console.log(data));
 
         event.target.reset();
         notify();
@@ -45,11 +44,6 @@ const Register = () => {
     }
 
     // registering with google 
-    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
-
-    const handleGoogleSignIn = () => {
-        signInWithGoogle();
-    }
 
 
     return (

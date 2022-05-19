@@ -4,7 +4,7 @@ import "./Attendence.css"
 const AttendencePage = () => {
     const [data, setData] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:3000/fakedata.json')
+        fetch('http://localhost:5000/attendence')
             .then(res => res.json())
             .then(data => setData(data))
     }, [])
@@ -12,7 +12,7 @@ const AttendencePage = () => {
 
     return (
         <div className='attendance'>
-            {data.map(res => <div key={res.id}>
+            {data.map(res => <div key={res._id}>
                 <h2 className='mt-5 mb-4'> {res.date}</h2>
                 <table>
                     <thead>

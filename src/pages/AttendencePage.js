@@ -4,7 +4,7 @@ import "./Attendence.css"
 const AttendencePage = () => {
     const [data, setData] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/attendence')
+        fetch('https://gentle-gorge-38352.herokuapp.com/attendence')
             .then(res => res.json())
             .then(data => setData(data))
     }, [])

@@ -31,7 +31,7 @@ const Register = () => {
         await createUserWithEmailAndPassword(email, password);
 
         // adding the user to database 
-        fetch('http://localhost:5000/addUser',{
+        fetch('https://gentle-gorge-38352.herokuapp.com/addUser',{
             method: 'POST',
             headers: {"content-type": "application/json"},
             body: JSON.stringify({name, catagory: "officials"})

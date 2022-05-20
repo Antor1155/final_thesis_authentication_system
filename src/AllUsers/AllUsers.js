@@ -5,7 +5,7 @@ const AllUsers = () => {
     const [deleted, setDeleted] = useState({})
     const [data, setData] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://gentle-gorge-38352.herokuapp.com/users')
             .then(res => res.json())
             .then(data => setData(data))
     }, [, deleted])
@@ -14,7 +14,7 @@ const AllUsers = () => {
     const handleDelete = (id) => {
         const confirm = window.confirm("really want to delete", id);
         if (confirm) {
-            fetch(`http://localhost:5000/deleteUser/${id}`,{
+            fetch(`https://gentle-gorge-38352.herokuapp.com/deleteUser/${id}`,{
                 method:'delete'
             })
                 .then(res => res.json())
